@@ -1,0 +1,25 @@
+{% import "bootstrap/wtf.html" as wtf %}
+
+<html>
+<head>
+<title>my-web</title>
+</head>
+<body>
+{{wtf.quick_form(reseach)}}
+<p>书名：{{book_name}}</p>
+<p>出版日期：{{publish_date}}</p>
+<p>作者：{{writter}}</p>
+<p>出版商：{{publisher}}</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<h1>评论</h1>
+<ul id="myul">
+	{% for comment in comments%}
+		<li>{{comment}}</li>
+	{% endfor %}
+</ul>
+{{wtf.quick_form(form)}}
+</body>
+</html>
